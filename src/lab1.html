@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/common/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/common/jquery-3.2.0.min.js"></script>
+    <script src="js/common/bootstrap.min.js"></script>
+    <script src="js/testSystem.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+    <div class="content">
+        <div class="header__title">
+            Исследование силомоментных датчиков
+        </div>
+        <div class="header__subtitle">
+            <a href="index.html"> Інформаційне забезпечення робототехнічних систем</a>
+        </div>
+    </div>
+</div>
+
+<div class="content main">
+
+    <h4>Выберите тестовий файл:</h4>
+    <input type="file" id="file-input" />
+
+
+    <div class="test__menu" >
+        <div class="test__item" style="display:none" id="sample-test">
+            <div class="test__question">
+                <div class="question_text">
+
+                </div>
+                <input class="option" type="radio" name="" value="" style="display: none">
+            </div>
+            <div class="test__control">
+                <div class="correct" style="display: none">
+                    Правильно
+                </div>
+                <div class="incorrect" style="display: none">
+                    Неправильно
+                </div>
+                <button type="button" class="btn btn-success js-click-answer">Відповісти</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

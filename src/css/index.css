@@ -1,0 +1,56 @@
+.header {
+    background: lightgreen;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header__title {
+    font-size: 17px;
+    display: inline-block;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.header__subtitle {
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+    padding: 12px;
+}
+
+.content.main {
+    margin-top: 10px ;
+}
+
+.test__item {
+    background: #e2e2e2;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.test__question, .test__control {
+    display: inline-block;
+}
+
+.test__question {
+    width: calc( 100% - 120px);
+}
+
+.test__control {
+    width: 110px;
+}
+
+.incorrect {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.correct {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+}
