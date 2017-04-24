@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/common/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/common/jquery-3.2.0.min.js"></script>
+    <script src="js/common/bootstrap.min.js"></script>
+    <script src="js/Calculate.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+    <div class="content">
+        <div class="header__title">
+            Исследование силомоментных датчиков
+        </div>
+        <div class="header__subtitle">
+            <a href="index.html"> Інформаційне забезпечення робототехнічних систем</a>
+        </div>
+    </div>
+</div>
+
+<div class="content main">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Расчет модульного силомоментного датчика ПР</h3>
+            <br>
+            <h4>Расчет сили F1</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">S1,H</span>
+                        <input id="inpt_s1" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">S2,H</span>
+                        <input id="inpt_s2" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Z1,м</span>
+                        <input id="inpt_z1" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Z2,м</span>
+                        <input id="inpt_z2" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <button id="btn_f1" type="button" class="btn btn-success" onclick="calc_f1();">Расчитать F1</button>
+                </div>
+                <div class="col-md-3">
+                    <input id="val_f1" type="text" class="form-control" value="F1 = " disabled>
+                </div>
+            </div>
+
+            <h4>Расчет сили F2</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">S6,H</span>
+                        <input id="inpt_s6" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">S5,H</span>
+                        <input id="inpt_s5" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Z6,м</span>
+                        <input id="inpt_z6" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Z5,м</span>
+                        <input id="inpt_z5" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <button onclick="calc_f2();" id="btn_f2" type="button" class="btn btn-success"  >Расчитать F2</button>
+                </div>
+                <div class="col-md-3">
+                    <input id="val_f2" type="text" class="form-control" value="F2 = " disabled>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-6">
+            <img src="images/PR1.JPG" class="img-responsive" alt="Cinque Terre" width="400px" height="400px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Расчет сили F3</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Zt,м</span>
+                        <input id="inpt_zt"type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">S4,H</span>
+                        <input id="inpt_s4" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Yt,м</span>
+                        <input id="inpt_yt" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Y4,м</span>
+                        <input id="inpt_y4" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-md-3">
+                    <button id="btn_f3" onclick="calc_f3();" type="button" class="btn btn-success" >Расчитать F3</button>
+                </div>
+                <div class="col-md-3">
+                    <input id="val_f3" type="text" class="form-control" value="F3 = " disabled>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">S3,H</span>
+                        <input id="inpt_s3" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Z3,м</span>
+                        <input id="inpt_z3" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Y3,м</span>
+                        <input id="inpt_y3" type="text" class="form-control" placeholder="0.00" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
